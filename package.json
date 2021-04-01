@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "TIW8 TP1 Mise en place Stack",
   "main": "index.js",
+  "dev": "webpack --mode development && node server/index.js",
   "scripts": {
     "start": "node server/index.js",
+    "build": "webpack --mode production",
     "test": "echo \"Error: pas de tests pour le moment\" && exit 1"
   },
   "repository": {
@@ -18,7 +20,18 @@
   },
   "homepage": "https://github.com/NdiagaSarr/TP1_Slack#readme",
   "dependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
     "dom": "0.0.3",
+    "file-loader": "^6.2.0",
     "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.30.0"
   }
 }
