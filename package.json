@@ -1,0 +1,24 @@
+{
+  "name": "tp1_stack",
+  "version": "1.0.0",
+  "description": "TIW8 TP1 Mise en place Stack",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "echo \"Error: pas de tests pour le moment\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NdiagaSarr/TP1_Slack.git"
+  },
+  "author": "Ndiagadroid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NdiagaSarr/TP1_Slack/issues"
+  },
+  "homepage": "https://github.com/NdiagaSarr/TP1_Slack#readme",
+  "dependencies": {
+    "dom": "0.0.3",
+    "react": "^17.0.2"
+  }
+}
