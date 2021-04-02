@@ -3,13 +3,13 @@ const path = require('path');
 const DIST_DIR = path.join(__dirname, '../dist'); 
 const HTML_FILE = path.join(DIST_DIR, 'index.html'); 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./client/index.html", 
-  filename: "./index.html"
+  template: "./src/index.html", 
+  filename: "./src/index.html"
 });
 module.exports = (env, argv) => {
   console.log(argv.mode);
   return {
-    entry: "./client/index.jsx",
+    entry: "./src/index.jsx",
     output: { // NEW
       path: path.join(__dirname, 'dist'),
       filename: "[name].js"
@@ -27,10 +27,9 @@ module.exports = (env, argv) => {
         {
             test: /\.(png|svg|jpg|gif)$/,
             loader: "file-loader",
-            options: { name: '/static/[name].[ext]' }
+            options: { name: '../logo/logo.png' }
         }
       ]
-      
     }
   };
 };
