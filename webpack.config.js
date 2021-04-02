@@ -27,9 +27,10 @@ module.exports = (env, argv) => {
         {
             test: /\.(png|svg|jpg|gif)$/,
             loader: "file-loader",
-            options: { name: '../logo/logo.png' }
+            options: { name: '/logo/[name].[ext]' }
         }
       ]
-    }
+    },
+    watch: argv.mode === 'development',
   };
 };
