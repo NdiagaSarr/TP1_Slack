@@ -24,9 +24,11 @@
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
+    "bootstrap": "^4.6.0",
     "dom": "0.0.3",
     "file-loader": "^6.2.0",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.5.2"
   },
   "devDependencies": {
     "babel": "^6.23.0",
