@@ -1,11 +1,10 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
-const DIST_DIR = path.join(__dirname, '../dist'); 
-const HTML_FILE = path.join(DIST_DIR, 'index.html'); 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html", 
-  filename: "./src/index.html"
+  filename: "./index.html"
 });
+const ESLintPlugin = require('eslint-webpack-plugin');
 module.exports = (env, argv) => {
   console.log(argv.mode);
   return {
@@ -20,9 +19,7 @@ module.exports = (env, argv) => {
         {
             test: /\.(js|jsx)$/,
             exclude: /node_modules/,
-            use: {
-              loader: "babel-loader"
-            }
+            use: ["babel-loader","eslint-loader"]
         },
         {
             test: /\.(png|svg|jpg|gif)$/,
