@@ -13,10 +13,11 @@ const HTML_FILE = path.join(DIST_DIR, 'index.html');
 app.get('/api',(req,res)=>{
     res.send(mockResponse);
 });
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
     res.status(200).send('Hello World! Ndiaga in the building');
-   });
-   app.listen(port, function () {
-    console.log('App listening on port: ' + port);
-   });
+   });*/
 app.use(express.static(DIST_DIR));
+
+app.listen(port, function () {
+    console.log('App listening on port: ' + port);
+});
